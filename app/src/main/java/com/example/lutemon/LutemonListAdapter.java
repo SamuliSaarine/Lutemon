@@ -30,7 +30,7 @@ public class LutemonListAdapter extends RecyclerView.Adapter<LutemonViewHolder> 
         holder.lutemonName.setText(lutemons.get(position).getName() + " (" + ")");
         holder.lutemonAttack.setText(String.valueOf(lutemons.get(position).getAttack()) + " kg");
         holder.lutemonAttack.setText(String.valueOf(lutemons.get(position).getDefense()) + " m");
-        holder.lutemonImage.setImageResource(lutemons.get(position).getExperience());
+        holder.lutemonImage.setColorFilter(lutemons.get(position).getColor());
 
     }
 

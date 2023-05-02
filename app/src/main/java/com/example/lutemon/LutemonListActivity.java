@@ -15,10 +15,10 @@ public class LutemonListActivity extends AppCompatActivity {
 
         Player player = Player.getInstance();
 
-        RecyclerView recyclerView = findViewById(androidx.core.R.id.action_container);
+        //RecyclerView recyclerView = findViewById();
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new LutemonListAdapter(getApplicationContext(), player.getLutemons()));
+        //recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //recyclerView.setAdapter(new LutemonListAdapter(getApplicationContext(), player.getLutemons()));
 
     }
 }
