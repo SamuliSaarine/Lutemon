@@ -1,7 +1,6 @@
 package com.example.lutemon;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
 public class Player {
     ArrayList<Lutemon> lutemons = new ArrayList<>();
@@ -18,10 +17,16 @@ public class Player {
     }
 
     //Creating lutemon
-    public void addLutemon()
+    public void addLutemon(String name)
     {
-        Lutemon lutemon = Lutemon.RandomLutemon();
+        Lutemon lutemon = Lutemon.randomLutemon();
+        lutemon.giveName(name);
         lutemons.add(lutemon);
+    }
+
+    public void killLutemon(Lutemon lutemon)
+    {
+        lutemons.remove(lutemon);
     }
 
     ArrayList<Lutemon> getLutemons()

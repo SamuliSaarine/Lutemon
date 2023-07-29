@@ -3,4 +3,24 @@
     <string name="body">body</string>
     <string name="eyes">eyes</string>
     <string name="name">name</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="training">Training</string>
+    <string name="battle">Battle</string>
+    <string name="add">Add</string>
+    <string name="title_activity_battle_start">BattleStartActivity</string>
+    <string name="attack">Attack</string>
+    <string name="experience">Experience</string>
+    <string name="defense">Defense</string>
+    <string name="gotrain">Train</string>
+    <string name="gobattle">Battle</string>
+    <string name="train">Train</string>
+    <string name="goBattle">Battle</string>
+    <string name="nameinput">Name</string>
+    <string name="openhome">Home</string>
+    <string name="opentrain">Train</string>
+    <string name="train_defense">Train Defense</string>
+    <string name="train_attack">Train Attack</string>
 </resources>

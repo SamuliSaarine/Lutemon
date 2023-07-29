@@ -1,27 +1,47 @@
 package com.example.lutemon;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import android.appwidget.AppWidgetHostView;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+
+import java.util.ArrayList;
 
 public class TrainingActivity extends AppCompatActivity {
-
-    RadioGroup radioGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_training);
-        //radioGroup=findViewById(R.id.);
+
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar!=null)
+        {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+
+        Player player = Player.getInstance();
+
+        RecyclerView recyclerView = findViewById(R.id.trainingLutemonList);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(new LutemonTrainingListAdapter(getApplicationContext(), onlyTraining(player.getLutemons())));
     }
 
-    public void trainAttack(View view)
+    ArrayList<Lutemon> onlyTraining(ArrayList<Lutemon> lutemons)
     {
-        RadioButton radioButton = findViewById(radioGroup.getCheckedRadioButtonId());
-        TrainingField.trainAttack(radioGroup.indexOfChild(radioButton));
+        ArrayList<Lutemon> training = new ArrayList<>();
+
+        for (Lutemon lutemon : lutemons)
+        {
+            if(lutemon.isTraining())
+            {
+                training.add(lutemon);
+            }
+        }
+
+        return training;
     }
 }

@@ -13,8 +13,21 @@
         android:theme="@style/Theme.Lutemon"
         tools:targetApi="33">
         <activity
+            android:name=".BattleActivity"
+            android:parentActivityName=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".TrainingActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".LutemonHomeActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

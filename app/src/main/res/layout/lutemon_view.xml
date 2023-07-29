@@ -3,37 +3,103 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="120dp">
+    android:layout_height="140dp">
 
     <ImageView
         android:id="@+id/ivBody"
         android:layout_width="77dp"
         android:layout_height="86dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
         android:contentDescription="@string/body"
+        android:src="@drawable/lutemonbody"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/lutemonbody" />
+        app:tint="#FFFFFF"
+        app:tintMode="multiply" />
 
     <ImageView
         android:id="@+id/eyes"
         android:layout_width="75dp"
         android:layout_height="82dp"
         android:layout_marginStart="-76dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
         android:contentDescription="@string/eyes"
+        android:src="@drawable/lutemoneyes"
         app:layout_constraintStart_toEndOf="@+id/ivBody"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/lutemoneyes" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtName"
+        android:layout_width="122dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:autoText="false"
+        android:text="@string/name"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/ivBody"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Deprecated,TextSizeCheck,TextViewEdits" />
+
+    <TextView
+        android:id="@+id/txtExperience"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="25dp"
-        android:text="@string/name"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/experience"
         app:layout_constraintStart_toEndOf="@+id/ivBody"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <TextView
+        android:id="@+id/textAttack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/attack"
+        app:layout_constraintStart_toEndOf="@+id/ivBody"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <TextView
+        android:id="@+id/textDefense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/defense"
+        app:layout_constraintStart_toEndOf="@+id/ivBody"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <TextView
+        android:id="@+id/textHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="64dp"
+        android:text="Health"
+        app:layout_constraintStart_toEndOf="@+id/ivBody"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/goTrainBtn"
+        android:layout_width="91dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/gotrain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/goBattleBtn"
+        android:layout_width="91dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/gobattle"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
