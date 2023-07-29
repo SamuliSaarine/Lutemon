@@ -12,3 +12,5 @@ jonka kokemus on sama, hieman vähemmän tai hieman enemmän kuin lutemonilla.
 Taistelun eteneminen ja tulokset tulostetaan tekstinä Battle-näkymään.
 Taistelussa hyökkäyksen vahinko joko jaetaan tai siitä vähennetään puolustus, hyökkääjän eduksi.
 Voittaessa lutemon saa yhden maksimielämän lisää, hävitessä se kuolee.
+
+![Lutemon drawio (1)](https://github.com/SamuliSaarine/Lutemon/assets/59774773/4a888151-a69e-43eb-8009-b3e72ed14ef5)
